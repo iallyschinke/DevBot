@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f82bb86315.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>DevBot</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <i class="fa-regular fa-message fa-lg"></i>
+        <h1>DevBot</h1>
+
+        <button class="close">
+          <i class="fa-solid fa-xmark fa-xl"></i>
+        </button>
+      </header>
+
+      <main>
+        <ul>
+          <li class="message bot">
+            <i class="fa-solid fa-robot fa-lg"></i>
+            <p>Olá, sou o <strong>DevBot</strong> como posso te ajudar ?</p>
+          </li>
+        </ul>
+      </main>
+
+      <footer>
+        <textarea
+          placeholder="Insira uma mensagem..."
+          rows="1"
+          required
+        ></textarea>
+
+        <button class="send-message">
+          <i class="fa-regular fa-paper-plane"></i>
+        </button>
+      </footer>
+    </div>
+
+    <button class="toggler">
+      <i class="fa-regular fa-message fa-xl"></i>
+      <i class="fa-solid fa-xmark fa-xl"></i>
+    </button>
+  </body>
+</html>
