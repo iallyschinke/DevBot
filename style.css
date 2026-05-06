@@ -36,11 +36,6 @@ body {
     rgba(0, 0, 0, 0.1),
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
-  z-index: 999;
 }
 
 header {
@@ -161,8 +156,6 @@ textarea {
   color: var(--white);
   border: 0;
   cursor: pointer;
-  z-index: 1000;
-  transition: all 0.3s ease;
 }
 
 .toggler i {
@@ -171,7 +164,6 @@ textarea {
 
 .open-chat .container {
   opacity: 1;
-  visibility: visible;
 }
 
 .open-chat .toggler i:first-child,
