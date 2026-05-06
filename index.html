@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script
-      src="https://kit.fontawesome.com/f82bb86315.js"
+      src="https://kit.fontawesome.com/296319095b.js"
       crossorigin="anonymous"
     ></script>
 
@@ -36,7 +36,7 @@
         <ul>
           <li class="message bot">
             <i class="fa-solid fa-robot fa-lg"></i>
-            <p>Olá, sou o <strong>DevBot</strong> como posso te ajudar ?</p>
+            <p>Olá, sou o <strong>DevBot</strong>Como posso te ajudar?</p>
           </li>
         </ul>
       </main>
@@ -47,10 +47,10 @@
           rows="1"
           required
           oninput="handleAutoSize()"
-          onkeydown="handleChatOnkeyDown(event)"
+          onkeydown="handleChatOnKeyDown(event)"
         ></textarea>
 
-        <button class="send-message">
+        <button class="send-message" onclick="handleChat()">
           <i class="fa-regular fa-paper-plane"></i>
         </button>
       </footer>
