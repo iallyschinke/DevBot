@@ -4,29 +4,21 @@ const initialTextareaHeight = textarea.scrollHeight;
 
 //Botão para abrir o chat
 async function createBotReplay(content) {
-  const API_URL = "https://api.openai.com/v1/chat/completions";
-  const API_KEY = "COLOQUE_SUA_CHAVE_AQUI";
-
-  const response = await fetch(API_URL, {
+  const response = await fetch("http://localhost:3000/chat", {
     method: "POST",
     headers: {
       "content-Type": "application/json",
-      Authorization: `Bearer ${API_KEY}`,
     },
-    body: JSON.stringify({
-      model: "gpt-3.5-turbo",
-      messages: [
-        {
-          role: "user",
-          content,
-        },
-      ],
-    }),
+    body: JSON.stringify({ message: content }),
   });
 
   const data = await response.json();
 
-  return data.choices[0].message.content;
+  if (response.ok) {
+    return data.reply;
+  } else {
+    throw new Error(data.error || "Error ao obter resposta");
+  }
 }
 
 // Função para criar um elemento de mensagem no chat
