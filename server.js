@@ -12,10 +12,6 @@ app.use(cors()); // isso é para usar o middleware CORS, que permite que o servi
 app.use(express.json()); // isso é para usar o middleware express.json(), que permite que o servidor entenda requisições com corpo em formato JSON
 app.use(express.static(path.join(__dirname))); // isso é para servir arquivos estáticos (como HTML, CSS, JS) a partir do diretório atual (__dirname)
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
 // Endpoint para chat
 app.post("/chat", async (req, res) => {
   const { message } = req.body; // isso é para extrair a mensagem do corpo da requisição (req.body)
